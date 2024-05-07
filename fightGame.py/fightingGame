@@ -1,0 +1,25 @@
+import random
+player_health = 100
+
+opponent_health = 100
+
+print("Welcome to the TM fighting Game!")
+print("Defeat your opponent to win the game!")
+
+while True:
+    player_attack = random.randint(5, 15)
+    opponent_health -= player_attack
+    
+    if opponent_health <= 0:
+        print("Congratulations! You defeated your opponent!")
+        break
+    
+    opponent_attack = random.randint(5, 15)
+    player_health -= opponent_attack
+    
+    if player_health <= 0:
+        print("Oh no! You were defeated by your opponent!")
+        break
+    
+    print("Player Health:", player_health)
+    print("Opponent Health:", opponent_health)
